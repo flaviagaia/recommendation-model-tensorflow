@@ -9,7 +9,7 @@
   "dataset_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/raw/user_item_interactions.csv",
   "recommendation_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendations.csv",
   "model_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/artifacts/best_model.joblib",
-  "tensorboard_log_dir": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175000",
-  "history_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175000/history.json",
+  "tensorboard_log_dir": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175034",
+  "history_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175034/history.json",
   "report_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendation_model_report.json"
 }

@@ -1,0 +1,15 @@
+{
+  "runtime_mode": "fallback_without_tensorflow",
+  "interaction_count": 18,
+  "user_count": 6,
+  "item_count": 6,
+  "train_interaction_count": 13,
+  "test_interaction_count": 5,
+  "rmse": 2.3345,
+  "dataset_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/raw/user_item_interactions.csv",
+  "recommendation_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendations.csv",
+  "model_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/artifacts/best_model.joblib",
+  "tensorboard_log_dir": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175000",
+  "history_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175000/history.json",
+  "report_artifact": "/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendation_model_report.json"
+}

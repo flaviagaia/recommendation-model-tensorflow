@@ -4,17 +4,6 @@
 
 `recommendation-model-tensorflow` é um projeto de recomendação com `TensorFlow/Keras` e observabilidade de treino via `TensorBoard`, desenhado para mostrar como um modelo neural com embeddings de usuário e item pode ser estruturado de forma reproduzível.
 
-### Storytelling técnico
-
-Sistemas de recomendação não dependem só de regras manuais ou similaridade explícita. Em muitos cenários, o valor do modelo está em aprender representações latentes de usuários e itens, capturando afinidades que não aparecem diretamente em uma tabela de interações. É justamente aí que embeddings neurais fazem sentido, e é também aí que `TensorBoard` ajuda a observar se o treinamento está convergindo de forma estável.
-
-Este projeto foi desenhado com essa lógica:
-
-- materializa um conjunto sintético de interações `user-item-rating`;
-- codifica usuários e itens para índices inteiros;
-- tenta executar o caminho principal com embeddings em `TensorFlow/Keras`;
-- grava logs em `logs/fit/` para inspeção via `TensorBoard`;
-- mantém um fallback determinístico quando `tensorflow` não está disponível.
 
 ### Objetivo arquitetural
 
@@ -32,20 +21,20 @@ Essa organização torna o projeto mais útil como portfólio técnico do que um
 
 ### Arquitetura do projeto
 
-- [src/data_factory.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/src/data_factory.py)
-- [src/modeling.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/src/modeling.py)
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/main.py)
-- [tests/test_project.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/tests/test_project.py)
+- [src/data_factory.py](src/data_factory.py)
+- [src/modeling.py](src/modeling.py)
+- [main.py](main.py)
+- [tests/test_project.py](tests/test_project.py)
 
 ### Papel técnico de cada arquivo
 
-- [src/data_factory.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/src/data_factory.py)
+- [src/data_factory.py](src/data_factory.py)
   materializa o conjunto de interações `user-item-rating`.
-- [src/modeling.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/src/modeling.py)
+- [src/modeling.py](src/modeling.py)
   executa o encoding das entidades, o treino do modelo principal, o fallback local, a avaliação por `RMSE` e a persistência dos artefatos.
-- [main.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/main.py)
+- [main.py](main.py)
   roda o pipeline de ponta a ponta e imprime o sumário consolidado.
-- [tests/test_project.py](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/tests/test_project.py)
+- [tests/test_project.py](tests/test_project.py)
   valida o contrato mínimo do pipeline com thresholds compatíveis com o runtime local.
 
 ### Pipeline
@@ -102,15 +91,15 @@ Isso é importante por dois motivos:
 ### Artefatos gerados
 
 - interações materializadas:
-  [data/raw/user_item_interactions.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/raw/user_item_interactions.csv)
+  [data/raw/user_item_interactions.csv](data/raw/user_item_interactions.csv)
 - predições de teste:
-  [data/processed/recommendations.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendations.csv)
+  [data/processed/recommendations.csv](data/processed/recommendations.csv)
 - relatório consolidado:
-  [data/processed/recommendation_model_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendation_model_report.json)
+  [data/processed/recommendation_model_report.json](data/processed/recommendation_model_report.json)
 - modelo persistido:
-  [artifacts/best_model.joblib](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/artifacts/best_model.joblib)
+  [artifacts/best_model.joblib](artifacts/best_model.joblib)
 - histórico do run:
-  [logs/fit/20260401-175034/history.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/logs/fit/20260401-175034/history.json)
+  [logs/fit/20260401-175034/history.json](logs/fit/20260401-175034/history.json)
 
 ### Contrato do relatório final
 
@@ -187,10 +176,10 @@ When `tensorflow` is unavailable, the repository falls back to a deterministic r
 
 ### Generated artifacts
 
-- [data/raw/user_item_interactions.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/raw/user_item_interactions.csv)
-- [data/processed/recommendations.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendations.csv)
-- [data/processed/recommendation_model_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/data/processed/recommendation_model_report.json)
-- [artifacts/best_model.joblib](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/recommendation-model-tensorflow/artifacts/best_model.joblib)
+- [data/raw/user_item_interactions.csv](data/raw/user_item_interactions.csv)
+- [data/processed/recommendations.csv](data/processed/recommendations.csv)
+- [data/processed/recommendation_model_report.json](data/processed/recommendation_model_report.json)
+- [artifacts/best_model.joblib](artifacts/best_model.joblib)
 
 ### TensorBoard note
 
